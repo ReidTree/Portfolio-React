@@ -1,0 +1,181 @@
+body {
+  overflow-x: hidden;
+}
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  float: left;
+  cursor: pointer;
+}
+
+.App-header {
+  background-color: rgb(204,85,0);
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.direct-menu {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.popMenu {
+font-size: 1.5em;
+padding: 3% 0;
+}
+
+.popMenu:hover {
+  background-color: rgba(0,0,0,.75);
+}
+
+.hamburger {
+    float: right;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 1.25em;
+    height: 0.8em;
+    margin-right: 2em;
+    border-top: 0.2em solid #fff;
+    border-bottom: 0.2em solid #fff;
+    z-index: 1000;
+}
+
+.hamburger:before {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    left: 0px;
+    width: 100%;
+    border-top: 0.2em solid #fff;
+  }
+
+#hamburger div.popStyle {
+  float: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,.5);
+  z-index: 100;
+}
+
+.content-body {
+  width: 100%;
+  height: 400px;
+  cursor: pointer;
+  border: solid 3px black;
+  overflow: hidden;
+}
+
+#About {
+  margin-top: 160px;
+}
+.pageTitleWrap {
+  margin: 0 auto;
+  transform: translateY(50%);
+  width: 60%;
+  padding: 4px;
+  background-color: white;
+  text-align: center;
+}
+
+.pageTitle {
+  margin: 0 auto;
+  font-size: .7em;
+  padding: 20px;
+  border: 4px solid rgb(204,85,0);
+  background-color: white;
+  color: rgb(204,85,0);
+}
+.imgFade {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,0), rgba(255,255,255,1));
+  z-index: 25;
+}
+.aboutWrap:hover {
+  filter: hue-rotate(180deg);
+}
+#aboutMouse {
+  width: 100%;
+  height: 100%;
+}
+
+div.aboutWrap {
+  width: 100%;
+  background-image: url("./imgs/Chevron-lightblue.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.contact {
+  background-color: lightgrey;
+}
+
+.page-content-wrap {
+  font-size: 2em;
+  font-weight: bolder;
+  color: black;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#hello {
+  background-color: pink;
+  height: 100%;
+  position: fixed;
+  top: 100px;
+  z-index: 50;
+  -webkit-transition: height 1s;
+  transition: height 2s;
+}
+.copy-right {
+  font-size: 10px;
+  margin: 1%;
+}
+div.konvajs-content {
+  position: relative;
+  top: 0;
+}
+div canvas {
+  margin: 0;
+  position: absolute;
+  overflow: auto;
+}
+.demos-wrap {
+  /* margin: 0; */
+  position: absolute;
+  width: 100%;
+  height: 400px;
+}
+#demo-page div{
+  top: 0;
+}
+.hide {
+  display: none;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

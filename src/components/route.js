@@ -1,7 +1,7 @@
 import About from './about';
 import Demos from './demos';
 import Creative from './creative';
-import OtherSites from './other-sites';
+import Sites from './other-sites';
 import Pop from './popStyle';
 import directChange from './directChange';
 import DemoPage from './demoPage';
@@ -16,7 +16,7 @@ const Route = {
     About: About,
     Demos: Demos,
     Creative: Creative,
-    OtherSites: OtherSites,
+    Sites: Sites,
     Pop: Pop,
     directChange: directChange,
     DemoPage: DemoPage,

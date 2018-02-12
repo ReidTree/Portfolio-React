@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 // import Route from './routes';
 
-
 class Contact extends Component {
   render() {
     return (
-      <div className="contact content-body">
-        <div className="contact-wrap">
-          <h3> CONTACT </h3>
+      <div className="contact-wrap">
+        <div className="pageTitleWrap">
+          <h3 className="pageTitle"> CONTACT </h3>
         </div>
       </div>
     );

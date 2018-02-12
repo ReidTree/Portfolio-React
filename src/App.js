@@ -9,7 +9,6 @@ class App extends Component {
       <div className="App">
         <Route.Fold />
         <Route.Pages.Page what='home-wrap' check={true} />
-        <Route.Contact />
         <div className="copy-right">
           © REID TRIERWEILER 2018
         </div>

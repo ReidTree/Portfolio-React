@@ -10,11 +10,6 @@ class PageClickComponent extends Component {
       scrollTo: window.scrollY,
     };
     this.handleClick = this.handleClick.bind(this)
-    this.scrollTo = 0;
-    this.top= 0;
-    this.scrollPage = {
-
-    }
   }
 
   handleClick(pages, s){
@@ -25,7 +20,6 @@ class PageClickComponent extends Component {
     } else {
       self.setState({pageName: pages});
     }
-    // console.log(this.scrollTo, s)
   }
 
   renderPage(value, looks, locate, scroll) {
@@ -65,7 +59,8 @@ class Page extends Component {
         {this.renderContent(<Route.About />, this.props.check, 0)}
         {this.renderContent(<Route.Demos />, this.props.check, 408)}
         {this.renderContent(<Route.Creative />, this.props.check, 811)}
-        {this.renderContent(<Route.OtherSites />, this.props.check, 1222)}
+        {this.renderContent(<Route.Sites />, this.props.check, 1222)}
+        {this.renderContent(<Route.Contact />, this.props.check, 1322)}
       </div>
     );
   }

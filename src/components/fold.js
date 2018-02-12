@@ -4,14 +4,8 @@ import Route from './route';
 
 class MenuItem extends Component {
   render() {
-    if (this.props.show){
-      return (
-        <Route.Pages.Page what="menu-pop" check={undefined}/>
-      );
-    } else {
-      return <div></div>
+    return <Route.Pages.Page what="menu-pop" check={undefined}/>
     }
-  }
 }
 
 class Hamburger extends Component {
@@ -20,7 +14,6 @@ class Hamburger extends Component {
     this.state = {
       menuActive: false,
     };
-
   }
 
 
@@ -31,12 +24,12 @@ class Hamburger extends Component {
   }
 
   render() {
-    const items = this.state.menuActive;
+    const items = this.state.menuActive ? <MenuItem /> : <div></div>;
     const popStyle = this.state.menuActive ? "popStyle" : null;
     return (
       <div id="hamburger" className="hamburger" onClick={() => this.handleClick()}>
         <div className={popStyle}>
-          <MenuItem show={items} />
+          {items}
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class OtherSites extends Component {
+class Sites extends Component {
 
   render() {
     return (
@@ -13,4 +13,4 @@ class OtherSites extends Component {
   }
 }
 
-export default OtherSites;
+export default Sites;

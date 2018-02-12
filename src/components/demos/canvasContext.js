@@ -8,14 +8,6 @@ function rect(props) {
     ctx.fillRect(x, y, width, height);
 }
 
-// const canvasVar = {
-//   maxRadius: 9,
-//   minradius: 2,
-//   pi: Math.PI*2,
-//   scroll_position: 0,
-//   ticking:
-// }
-
 function randomColor(){
   const colors = ["blue","green","red","darkorange","grey"];
   let clr;
@@ -47,12 +39,12 @@ class MyRect extends Component {
       const cW = this.props.containObj.containerW;
       const cH = this.props.containObj.containerH;
         return (
-            <Rect
-                x={0} y={0} width={cW} height={cH}
-                fill={this.state.color}
-                shadowBlur={10}
-                onMouseMove={this.handleMouseMove}
-            />
+          <Rect
+            x={0} y={0} width={cW} height={cH}
+            fill={this.state.color}
+            shadowBlur={10}
+            onMouseMove={this.handleMouseMove}
+          />
         );
     }
 }
@@ -68,12 +60,9 @@ class Canvas extends Component {
   }
 
   updateDimensions() {
-    const containerWidth = window.innerWidth;
-    const containerHeight = window.innerHeight;
-    const scroll = window.scrollY;
-    console.log(scroll)
-    this.setState({containerW: containerWidth,
-    containerH: containerHeight});
+    const contain = windowHand();
+    this.setState({containerW: contain.winWidth,
+    containerH: contain.winHeight});
   }
 
   componentDidMount() {

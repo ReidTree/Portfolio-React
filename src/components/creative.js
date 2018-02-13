@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Route from './route';
 
 class Creative extends Component {
   render() {
     return (
-      <div className="pageTitleWrap">
-        <h3 className="pageTitle"> CREATIVE </h3>
+      <div>
+        <Route.PageTitle title="CREATIVE" />
+        <img src="./imgs/micapital_stack.png" />
       </div>
     );
   }

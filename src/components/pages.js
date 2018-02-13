@@ -8,24 +8,25 @@ class PageClickComponent extends Component {
     this.state = {
       pageName: this.props.name,
       scrollTo: window.scrollY,
+      titleToTop: undefined,
     };
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(pages, s){
+  handleClick(pages, s, which){
     const self = this;
     window.scrollTo(0,s);
     if(self.state.pageName === pages) {
-      self.setState({pageName: Pop()});
+      self.setState({pageName: Pop(), titleToTop: "titleToTop"});
     } else {
-      self.setState({pageName: pages});
+      self.setState({pageName: pages, titleToTop: undefined});
     }
   }
 
-  renderPage(value, looks, locate, scroll) {
-    if (looks === true) {
+  renderPage(value, which, locate, scroll) {
+    if (which === true) {
       return (
-        <div id={this.state.pageName}  className={locate} onClick={() => this.handleClick(value.type.name, scroll)}>
+        <div id={this.state.pageName}  className={locate} onClick={() => this.handleClick(value.type.name, scroll, which)}>
           <div className="page-content-wrap"> {value} </div>
         </div>
       );
@@ -57,9 +58,9 @@ class Page extends Component {
     return (
       <div className={this.props.what}>
         {this.renderContent(<Route.About />, this.props.check, 0)}
+        {this.renderContent(<Route.Sites />, this.props.check, 1222)}
         {this.renderContent(<Route.Demos />, this.props.check, 408)}
         {this.renderContent(<Route.Creative />, this.props.check, 811)}
-        {this.renderContent(<Route.Sites />, this.props.check, 1222)}
         {this.renderContent(<Route.Contact />, this.props.check, 1322)}
       </div>
     );

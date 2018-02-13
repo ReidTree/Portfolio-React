@@ -8,6 +8,7 @@ import DemoPage from './demoPage';
 import Fold from './fold';
 import Contact from './contact';
 import Pages from './pages';
+import PageTitle from './pageTitle'
 
 //Demo Sites
 import Canvas from './demos/canvasContext'
@@ -24,6 +25,7 @@ const Route = {
     Contact: Contact,
     Pages: Pages,
     Canvas: Canvas,
+    PageTitle: PageTitle,
 }
 
 export default Route;

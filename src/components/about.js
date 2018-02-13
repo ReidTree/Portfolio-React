@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Route from './route';
 
 var mouseEvent = "mouseleave";
+var mktGif = "https://gph.is/23LJbZv";
+var codeGif = "https://gph.is/1K7BG9F";
+var designGif = "https://gph.is/28Smfn5";
 
 class AboutContent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      eventType: "nothing"
-    };
-  }
-
   render() {
     return (
       <div className="aboutWrap" style={{backgroundPosition: this.context.style}}>
         <div className="imgFade">
-          <div className="pageTitleWrap">
-            <h3 className="pageTitle"> ABOUT ME </h3>
-          </div>
+          <Route.PageTitle title="ABOUT ME" />
         </div>
       </div>
     );

@@ -6,9 +6,7 @@ class Demos extends Component {
     return (
       <div className="demos-wrap">
         <Route.Canvas />
-        <div className="pageTitleWrap">
-          <h3 className="pageTitle"> DEMOS </h3>
-        </div>
+        <Route.PageTitle title="DEMOS" />
         <Route.DemoPage />
       </div>
     );

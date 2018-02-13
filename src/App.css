@@ -108,6 +108,14 @@ div.aboutWrap {
   height: 100%;
   margin: 0; }
 
+div.siteWrap {
+  width: 100%;
+  background-image: url("./imgs/gathr.png");
+  background-repeat: repeat;
+  background-size: 100%;
+  height: 100%;
+  margin: 0; }
+
 .contact {
   background-color: lightgrey; }
 

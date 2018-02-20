@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import logo from '../imgs/TrierweilerCreates-white.png';
 import Route from './route';
 
 class MenuItem extends Component {
   render() {
-    return <Route.Pages.Page what="menu-pop" check={undefined}/>
+    return <div></div>
     }
 }
 
@@ -27,7 +27,7 @@ class Hamburger extends Component {
     const items = this.state.menuActive ? <MenuItem /> : <div></div>;
     const popStyle = this.state.menuActive ? "popStyle" : null;
     return (
-      <div id="hamburger" className="hamburger" onClick={() => this.handleClick()}>
+      <div id="hamburger" style={this.props.hamTop} className="hamburger" onClick={() => this.handleClick()}>
         <div className={popStyle}>
           {items}
         </div>
@@ -36,13 +36,30 @@ class Hamburger extends Component {
   }
 }
 
-class Fold extends Component {
+class FoldMount extends Component {
   render() {
     return (
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Hamburger />
-      </header>
+      <div className="foldContain">
+        <header className="App-header" style={this.props.foldH}>
+          <Hamburger hamTop={this.props.hamTop} />
+          <div className="logo-container" style={this.props.foldH}>
+            <img src={logo} className="App-logo" alt="logo" style={this.props.foldH} />
+          </div>
+        </header>
+        <div style={this.props.foldInitH}> </div>
+      </div>
+    )
+  }
+}
+
+class Fold extends Component {
+  render() {
+    var foldStateInit = this.props.foldSInit;
+    var foldState = this.props.foldS;
+    var foldMin = this.props.foldM;
+    console.log(foldStateInit, foldState, foldMin)
+    return (
+      <FoldMount foldInitH={{"height": foldStateInit + "px"}} foldH={{"height": foldState + "px"}} hamTop={{"top": ((foldMin/2)-(26/2)) + "px"}} />
     );
   }
 }

@@ -5,11 +5,11 @@ class Demos extends Component {
   render() {
     return (
       <div className="demos-wrap">
-        <Route.Canvas />
         <Route.PageTitle title="DEMOS" />
         <Route.DemoPage />
       </div>
     );
+    // <Route.Canvas />
   }
 }
 

@@ -1,33 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Route from './route';
+import Rt from './route';
+import webImages from './images';
 
 var mouseEvent = "mouseleave";
-var mktGif = "https://gph.is/23LJbZv";
-var codeGif = "https://gph.is/1K7BG9F";
-var designGif = "https://gph.is/28Smfn5";
 
-class AboutContent extends Component {
-  render() {
-    return (
-      <div className="aboutWrap" style={{backgroundPosition: this.context.style}}>
-        <div className="imgFade">
-          <Route.PageTitle title="MORE" />
-        </div>
-      </div>
-    );
-  }
-}
-
-
-class CircleCont extends Component {
+class CircleLayout extends Component {
   render() {
     var head = this.props.head;
     return (
       <div className="circleCont">
         <div className="circleWrap">
           <div className="circleIcons">
-            {this.props.children}
+             <img src={this.props.image} className={this.props.imgClass} />
           </div>
             <h4>{head}</h4>
         </div>
@@ -35,29 +20,36 @@ class CircleCont extends Component {
     );
   }
 }
-class CircleIcons extends Component {
+
+class Circle extends Component {
   render() {
     var wait = this.props.wait ? this.props.wait : " ";
+    const imgClass = "circleInit " + wait;
     return (
-      <div>
-        <CircleCont head="Wed Development">
-          <img src="http://flaticons.net/gd/makefg.php?i=icons/Wildlife/Web.png&r=241&g=90&b=36" className={"circleInit " + wait} />
-        </CircleCont>
-
-        <CircleCont head="Marketing">
-          <img src="http://flaticons.net/gd/makefg.php?i=icons/Shopping/Dollar-Tag.png&r=241&g=90&b=36" className={"circleInit " + wait} />
-        </CircleCont>
-
-        <CircleCont head="Design">
-          <img src="http://flaticons.net/gd/makefg.php?i=icons/Education/Stationery-01.png&r=241&g=90&b=36" className={"circleInit " + wait} />
-        </CircleCont>
-
+      <div className="contentContainer">
+        <CircleLayout head="Wed Development" image={webImages.webDevImg} imgClass={imgClass} />
+        <CircleLayout head="Marketing" image={webImages.mktImg} imgClass={imgClass} />
+        <CircleLayout head="Graphic Design" image={webImages.designImg} imgClass={imgClass} />
       </div>
     );
   }
 }
 
-AboutContent.contextTypes = {
+class AboutLayout extends Component {
+  render() {
+    return (
+      <div id="aboutMouse" onMouseEnter={this.props.mouseEnter} onMouseLeave={this.props.mouseLeave}>
+        <div className="aboutWrap" style={{backgroundPosition: this.context.style}}>
+          <div className="imgFade">
+            <Rt.PageTitle title="MORE" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+AboutLayout.contextTypes = {
   style: PropTypes.string
 };
 
@@ -73,16 +65,11 @@ class About extends Component {
     };
   }
 
-  handleMouseEnter(event){
-    mouseEvent = event.type;
-  }
-  handleMouseLeave(event){
-    mouseEvent = event.type;
-  }
+  handleMouseEnter(event){ mouseEvent = event.type; }
 
-  getChildContext() {
-    return {style: this.state.motion+"px 0"}
-  }
+  handleMouseLeave(event){ mouseEvent = event.type; }
+
+  getChildContext() { return {style: this.state.motion+"px 0"} }
 
   motionState() {
     var self = this;
@@ -112,14 +99,14 @@ class About extends Component {
 
   render() {
     return(
-      <div className="summary">
-        <div className="beautiful" >
-          <h3>Developing Beautiful Web</h3>
-        </div>
-        <CircleIcons wait={this.state.wait} />
-        <div id="aboutMouse" onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}>
-          <AboutContent className="about-wrap" />
+      <div className="summary contentContainer">
+        <div className="contentWrap" >
+          <div className="beautiful" >
+            <h3>Developing Beautiful Web</h3>
+          </div>
+          <Circle wait={this.state.wait}  />
+          <AboutLayout mouseEnter={this.handleMouseEnter}
+            mouseLeave={this.handleMouseLeave} />
         </div>
       </div>
     );

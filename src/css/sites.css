@@ -1,0 +1,44 @@
+.siteCont{background: linear-gradient(to right, rgba(241,90,36,0),rgba(241,90,36,1), rgba(241,90,36,0)); width: 100%; margin: 50px auto; padding: 10px 0;}
+
+.siteWrap { width: 70%; margin: 0 auto;}
+
+
+.iSiteCont { width: 100%; margin: 0 auto; display: inline-flex; }
+
+.iSiteWrap {width: 100%; margin: 0 auto;}
+
+
+.iSiteImgBox { margin: 5px auto; width: 90%; overflow: hidden; background-color: white; border-radius: 25px; border: 1px solid black;}
+.iSiteImg { margin: 0 auto; display: block; width: 70%; padding: 3%; }
+.Gathr {padding: 15.5% 0;}
+
+/* .iSiteTextWrap { display: inline-flex; width: 20%;} */
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {
+
+}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px) {
+
+}
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {
+  .iSiteWrap {width: 100%;  display: inline-block;}
+
+  .iSiteCont { width: 50%; }
+  .siteCont{width: 100%;}
+
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:961px) {
+
+}
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+
+}
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+
+}

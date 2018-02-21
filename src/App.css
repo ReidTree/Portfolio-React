@@ -1,33 +1,49 @@
 .App { text-align: center; width: 100%; }
 
+
+/* Fold */
 .App-logo { margin: 0 auto; cursor: pointer; float: left; left: -50%; position: relative; }
 .logo-container {float: left; left: 50%; position: relative; display: inline;}
 
-.App-header { background-color: rgb(204,85,0); height: 160px; width: 100%; color: white; position: fixed; top: 0; z-index: 1000; }
+.App-header { background-color: rgb(204,85,0); height: 160px; width: 100%; color: white; position: fixed; transition: background-color 1s; top: 0; z-index: 1000; }
 
-.direct-menu { width: 75%; margin: 0 auto; }
 
-.popMenu { font-size: 1.5em; padding: 3% 0; }
 
-.popMenu:hover { background-color: rgba(0,0,0,.75); }
+/* Hamburger Menu + Popup Menu */
+header.backActive { background-color: lightGrey; transition: 1.5s; position: fixed;}
+
+div img.backActive { background-color: rgba(0,0,0,0); position: relative; transition: 1.5s;}
 
 .hamburger { cursor: pointer; position: absolute; right: 0; display: inline-block; width: 1.5em; height: 1em; margin-right: 2em; border-top: 0.3em solid #fff; border-bottom: 0.3em solid #fff; z-index: 1000; top: 60px}
 
+
 .hamburger:before { content: ""; position: absolute; top: 0.35em; left: 0px; width: 100%; border-top: 0.3em solid #fff; }
+
+.hamburger.backActive { border-top: 0.3em solid black; border-bottom: 0.3em solid black; transition: .5s;}
+
+.hamburger.backActive:before { border-top: 0.3em solid black; transition: .5s;}
 
 #hamburger div.popStyle { position: fixed; left: 0; top: 0; width: 100%; height: 100%; margin: 0 auto; background-color: rgba(0,0,0,.5); z-index: 100; }
 
-/* #topBar {margin: 20px auto;} */
-#bottomBar {transform: translateY(100%); -ms-transform: translateY(100%); -webkit-transform: translateY(-100%);}
-.barStyleInit { margin: 20px auto; width: 80%; position: absolute; transition: .5s; z-index: 0}
-div.barStyleAfter {width: 100%; transition: 1s;}
-.barTop {width: 100%;  }
+.direct-menu { width: 75%; margin: 0 auto; }
+.popMenu { font-size: 1.5em; padding: 3% 0; }
+.popMenu:hover { background-color: rgba(0,0,0,.75); }
+/* Hamburger Menu End */
+/* Fold End */
 
-.barBottom {width: 100%; transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg);}
 
-.break-bar-outer { display: inline-block; background-color: white; height: 10px; margin: 0 auto;}
 
-.break-bar-inner { border-top: 10px solid black; width: 100%; height: 15px;}
+
+/* Break Bar Lines */
+.break-bar-outer { display: inline-flex; background-color: white; height: 10px; margin: 0 auto;}
+
+.break-bar-inner { width: 100%; }
+
+.contentBreak { margin: 0 auto;}
+.starBreak {width: 40px; display: inline-flex;}
+/* .starBreak:nth-child(2n+0) {float: right; } */
+/* Break Bar Lines End */
+
 
 
 /* about circles */
@@ -52,36 +68,31 @@ img.circleAnimate:hover {opacity: 1;
 }
 .circleIcons::after { overflow: none;}
 
-.circleCont {width: 250px; padding: 0 3%; margin: 0 auto; display: inline-flex;}
+.circleCont {width: 100%; margin: 0 auto; display: inline-flex;}
 .circleWrap { display: inline-block; margin: 0 auto;}
-.circleIcons { border: 10px solid black; border-radius: 50%; width: 80%; margin: 0 auto; overflow: hidden;}
+.circleIcons { border: 5px solid black; border-radius: 50%; width: 80%; margin: 0 auto; overflow: hidden;}
+div.circleIcons:hover { border: 10px solid #6DCFF6; transition: .5s;}
 
+.beautiful {width: 100%; margin: 50px auto 0 auto; font-size: 2em; text-align: center;}
 
+.summary{text-align: center;}
+/* about circles End */
 
-
-
-.contentBreak { margin: 0 auto;}
-.starBreak {width: 40px; display: inline-flex;}
-.starBreak:nth-child(2n+0) {float: right; }
-
-.beautiful {width: 100%; margin: 100px auto 0 auto; font-size: 2em;}
-.summary{width: 70%; margin: 0 auto; text-align: center;}
-
-.content-body { width: 100%; height: 400px; cursor: pointer; border: solid 2px black; }
-
+/*  Home View Titles */
 .pageTitleWrap { margin: 0 auto; transform: translateY(0%); -ms-transform: translateY(0%); -webkit-transform: translateY(0%); width: 30%; padding: 4px; background-color: white; }
 
 .pageTitle { margin: 0 auto; font-size: 1.5em; text-align: center; padding: 10px; border: 4px solid rgb(204,85,0); background-color: white; color: rgb(204,85,0); }
 
 .imgFade { padding: 20px 0; height: 100%; width: 100%; background: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,0), rgba(255,255,255,1)); z-index: 25; }
+/*  Home View Titles End */
 
- .aboutWrap:hover { filter: hue-rotate(180deg); }
 
+/* About Home View */
+.aboutWrap:hover { filter: hue-rotate(180deg); }
 #aboutMouse { width: 100%; height: 100%; }
-
 div.aboutWrap { width: 100%; background-image: url("./imgs/Chevron-lightblue.jpg"); background-repeat: repeat; background-size: 100%; height: 100%; margin: 0 auto; z-index: 100; cursor: pointer;}
+/* About Home View End */
 
-div.siteWrap { width: 100%; background-image: url("./imgs/gathr.png"); background-repeat: repeat; background-size: 100%; height: 100%; margin: 0; }
 
 .contact { background-color: lightgrey; }
 
@@ -91,12 +102,44 @@ div.siteWrap { width: 100%; background-image: url("./imgs/gathr.png"); backgroun
 
 .copy-right { font-size: 10px; margin: 1%; }
 
-div.konvajs-content { position: relative; top: 0; }
-
-div canvas { margin: 0; position: absolute; overflow: auto; z-index: 3000; }
-
-.demos-wrap { position: absolute; width: 100%; height: 400px; }
-
-#demo-page div{ top: 0; }
-
 .hide { display: none; }
+
+
+
+
+.contentContainer { width: 100%; margin: 0 auto;}
+
+.contentWrap { width: 95%; margin: 0 auto; }
+ /* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {
+  .contentWrap { width: 95%;}
+  .circleWrap { width: 50%;}
+}
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px) {
+  .contentWrap { width: 90%;}
+  .circleWrap { width: 40%;}
+}
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {
+  .contentWrap { width: 85%;}
+  .circleCont {width: 30%;}
+  .circleWrap { width: 100%;}
+  .circleIcons { border: 10px solid black; }
+
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:961px) {
+  .contentWrap { width: 80%; }
+
+
+}
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+  .contentWrap { width: 75%; }
+
+}
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+  .contentWrap { width: 70%; }
+}

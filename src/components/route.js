@@ -1,26 +1,24 @@
-import About from './about';
-import Demos from './demos';
-import Creative from './creative';
-import Sites from './other-sites';
-import DemoPage from './demoPage';
 import Fold from './fold';
+import About from './about';
+import Sites from './other-sites';
+import Creative from './creative';
 import Contact from './contact';
 import PageTitle from './pageTitle';
 import BarBetween from './barBetween';
-import Responsive from './responsive';
+import Res from './responsive';
+import Css from './style';
 
 
-const Route = {
-    About: About,
-    Demos: Demos,
-    Creative: Creative,
-    Sites: Sites,
-    DemoPage: DemoPage,
-    Fold: Fold,
-    Contact: Contact,
-    PageTitle: PageTitle,
-    BarBetween: BarBetween,
-    Responsive: Responsive,
+const Rt = {
+  Fold: Fold,
+  About: About,
+  Sites: Sites,
+  Creative: Creative,
+  Contact: Contact,
+  PageTitle: PageTitle,
+  BarBetween: BarBetween,
+  Res: Res,
+  Css: Css,
 }
 
-export default Route;
+export default Rt;

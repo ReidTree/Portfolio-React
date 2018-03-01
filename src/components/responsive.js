@@ -4,7 +4,6 @@ import Rt from '../components/route';
 class FoldSizing extends Component {
   render() {
      Res.ResCalc(this.props.sW, this.props.sH, this.props.sY);
-    console.log(sizeExport.foldState)
     return (
       <Rt.Fold foldM={sizeExport.foldMin} foldS={sizeExport.foldState} foldSInit={sizeExport.foldStateInit}/>
     );

@@ -51,7 +51,6 @@ class App extends Component {
         <Rt.Sites sW={sW} sH={sH}/>
         <Rt.Res.BarSizing sizeExport={sizeExport}/>
         <Rt.Creative />
-        <Rt.Res.BarSizing sizeExport={sizeExport}/>
         <Rt.Contact />
         <div className="copy-right">
           © REID TRIERWEILER 2018

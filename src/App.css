@@ -94,13 +94,19 @@ div.aboutWrap { width: 100%; background-image: url("./imgs/Chevron-lightblue.jpg
 /* About Home View End */
 
 
-.contact { background-color: lightgrey; }
+.contact-container { background-color: rgba(204,85,0,1); height: 600px;}
+.contact-wrap { padding-top: 25px;}
+.contact-wrap div { margin: 0 auto; width: 30%; padding: 4px; background-color: rgba(204,85,0,1); }
+
+.contact-wrap div h3 { margin: 0 auto; font-size: 1.5em; text-align: center; padding: 10px; border: 4px solid white; color: white; background-color: rgba(204,85,0,1) }
 
 .page-content-wrap { font-size: 2em; font-weight: bolder; margin: 0; height: 100%; overflow: hidden; }
 
 #hello { background-color: pink; height: 100%; position: fixed; top: 100px; z-index: 50; -webkit-transition: height 1s; transition: height 2s; }
 
-.copy-right { font-size: 10px; margin: 1%; }
+.miCapLogo { max-width: 300px;}
+
+.copy-right { font-size: 10px; background-color: rgba(204,85,0,1); text-align: center; color: white; padding: 1% 0;}
 
 .hide { display: none; }
 

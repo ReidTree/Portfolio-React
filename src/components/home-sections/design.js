@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import Rt from './route';
+import Rt from '../route';
 
-class Creative extends Component {
+
+class HomeDesign extends Component {
   render() {
+    const creativeDirect = {
+      title: "creative",
+      type: "moreDirect",
+    };
     return (
-      <div>
+      <Rt.HomeLayout >
         <img className="miCapLogo" src="../imgs/micapital-stack.png" />
         <p>MICAPITAL is a financial firm based in Michigan. Specializing in creating tactical investment portfolios for their clients. </p>
         <a target="_blank" href="https://micapitaladvisors.com/"> visit MI Capital </a>
-        <Rt.PageTitle title="CREATIVE" />
-      </div>
+        <Rt.Layout objPass={creativeDirect} />
+      </Rt.HomeLayout >
     );
   }
 }
 
-export default Creative;
+export default HomeDesign;

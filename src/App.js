@@ -42,16 +42,15 @@ class App extends Component {
     const sY = window.scrollY;
     Rt.Res.ResCalc(sW,sH,sY)
     const sizeExport = Rt.Res.sizeExport;
-
     return (
       <div>
         <Rt.Res.FoldSizing sW={sW} sH={sH} sY={sY}/>
-        <Rt.About />
-        <Rt.Res.BarSizing sizeExport={sizeExport}/>
-        <Rt.Sites sW={sW} sH={sH}/>
-        <Rt.Res.BarSizing sizeExport={sizeExport}/>
-        <Rt.Creative />
-        <Rt.Contact />
+        <Rt.HomeAbout />
+        <Rt.StarBar sizeExport={sizeExport}/>
+        <Rt.HomeSites sW={sW} sH={sH}/>
+        <Rt.StarBar sizeExport={sizeExport}/>
+        <Rt.HomeDesign />
+        <Rt.HomeContact />
         <div className="copy-right">
           © REID TRIERWEILER 2018
         </div>

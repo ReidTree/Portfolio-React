@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Rt from './components/route';
 import bar from './imgs/bar.png';
+import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends Component {
       logoStart: "start",
       screenHeight: window.innerHeight,
       screenWidth: window.innerWidth,
-      screenFold: "hello"
+      screenFold: "hello",
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -37,26 +38,54 @@ class App extends Component {
   }
 
   render() {
+    const gists = Rt.gists;
     const sW = this.state.screenWidth;
     const sH = this.state.screenHeight;
     const sY = window.scrollY;
     Rt.Res.ResCalc(sW,sH,sY)
-    const sizeExport = Rt.Res.sizeExport;
     return (
-      <div>
-        <Rt.Res.FoldSizing sW={sW} sH={sH} sY={sY}/>
-        <Rt.HomeAbout />
-        <Rt.StarBar sizeExport={sizeExport}/>
-        <Rt.HomeSites sW={sW} sH={sH}/>
-        <Rt.StarBar sizeExport={sizeExport}/>
-        <Rt.HomeDesign />
-        <Rt.HomeContact />
-        <div className="copy-right">
-          © REID TRIERWEILER 2018
+      <Router>
+        <div>
+          <Rt.Res.FoldSizing sW={sW} sH={sH} sY={sY}/>
+          <div>
+            <Switch>
+              <Route path="/" exact component={Rt.Home} />
+              <Route path="/:gistId" component={Gist} />
+            </Switch>
+          </div>
+
+          <div className="copy-right">
+            © REID TRIERWEILER 2018
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
 
+
+const Gist = ({ match }) => (
+    <div>
+      <Rt.FindPage page={match.params.gistId} />
+    </div>
+  );
+
 export default App;
+
+// {gists ? (gists.map(gist => (
+//   <div key={gist.id}>
+//     <Link to={'/' + gist.id}>
+//       {gist.description || '[no description]'}
+//     </Link>
+//   </div>
+//   ))
+// ) : (
+//   <div> Loading... </div>
+// )}
+
+// <Rt.HomeAbout />
+// <Rt.StarBar sizeExport={sizeExport}/>
+// <Rt.HomeSites sW={sW} sH={sH}/>
+// <Rt.StarBar sizeExport={sizeExport}/>
+// <Rt.HomeDesign />
+// <Rt.HomeContact />

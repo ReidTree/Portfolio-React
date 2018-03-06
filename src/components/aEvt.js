@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Link, Switch, Redirect} from "react-router-dom";
+
 
 class Layout extends Component {
   constructor(props){
@@ -35,13 +37,15 @@ class Layout extends Component {
 
   moreDirect(x) {
     return (
-      <div className="aboutWrap" style={{backgroundPosition: this.state.style}}>
-        <div className="imgFade">
-          <div className="pageTitleWrap">
-            <h3 className="pageTitle"> MORE {x.toUpperCase()} </h3>
+      <Link style={{"textDecoration": "none"}} to={x}>
+        <div className="aboutWrap" style={{backgroundPosition: this.state.style}}>
+          <div className="imgFade">
+            <div className="pageTitleWrap">
+              <h3 className="pageTitle"> MORE {x.toUpperCase()} </h3>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 

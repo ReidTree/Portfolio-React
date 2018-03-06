@@ -2,11 +2,29 @@ import React, { Component } from 'react';
 import logo from '../imgs/TrierweilerCreates-white.png';
 import logoNrm from '../imgs/TrierweilerCreates-nrm-OngBlk.png';
 import Rt from './route';
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 
 class MenuItem extends Component {
   render() {
-    return <div></div>
-    }
+    const gists = Rt.gists;
+    return (
+      <div className="direct-menu">
+
+        {gists ? (gists.map(gist => (
+          <div key={gist.id}>
+            <Link style={{"textDecoration": "none"}} to={'/' + gist.id}>
+              <div className="popMenu" >
+                {gist.description || '[no description]'}
+              </div>
+            </Link>
+          </div>
+          ))
+        ) : (
+          <div> Loading... </div>
+        )}
+      </div>
+    );
+  }
 }
 
 class Hamburger extends Component {
@@ -70,7 +88,9 @@ class FoldMount extends Component {
         <header className={"App-header " + this.state.back} style={ps.foldH}>
           <Hamburger hovChange={this.state.back} hamTop={ps.hamTop} />
           <div className="logo-container" style={ps.foldH}>
-            <img  onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseEnter} src={this.state.img} className={"App-logo " + this.state.back} alt="logo" style={ps.foldH} />
+            <Link to="/home">
+              <img onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseEnter} src={this.state.img} className={"App-logo " + this.state.back} alt="logo" style={ps.foldH} />
+            </Link>
           </div>
         </header>
         <div style={ps.foldInitH}> </div>

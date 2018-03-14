@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Rt from '../route';
+import './starBar.css';
 
 class StarBar extends Component {
   render() {

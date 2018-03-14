@@ -3,43 +3,38 @@ import Rt from '../route';
 
 var mouseEvent = "mouseleave";
 
-//////////////// ABOUT ////////////////
+//////////////// SITE EXAMPLES ////////////////
 class SiteExamples extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      wait: undefined,
-    };
-  }
-
-  componentDidMount() {
-    var self = this;
-    this.timer = setTimeout(() => this.tick(), 500);
-  }
-
-  componentWillUnMount() {
-    clearTimeout(this.timer);
-  }
-
-  tick() {
-    this.setState({wait: "circleAnimate"})
-  }
-
   render() {
-    const moreStructure = {
-      title: "about",
+    const pMed = {
+      title: "Proverimed.com",
+      image: "../imgs/156.jpg",
+      type: "siteMotion",
+    }
+    const gathr = {
+      title: "Gathr",
+      image: Rt.webImages.heroku,
+      type: "siteMotion",
+    }
+    const sitesDirect = {
+      title: "sites",
       type: "moreDirect",
     }
     return(
       <Rt.HomeLayout >
         <div className="beautiful" >
-          <h3>Developing Beautiful Web</h3>
+          <h3>Trierweiler Sites</h3>
         </div>
         <div className="about-summary" >
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        <Rt.Circle wait={this.state.wait}  />
-        <Rt.Layout objPass={moreStructure} />
+        <div className="siteCont" >
+          <div className="siteWrap" >
+            <Rt.Layout objPass={pMed} />
+            <Rt.Layout objPass={gathr} />
+          </div>
+        </div>
+        <Rt.Layout objPass={sitesDirect}/>
       </Rt.HomeLayout >
     );
   }

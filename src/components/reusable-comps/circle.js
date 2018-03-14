@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Rt from '../route';
+import './circle.css';
 
 // circles in HomePage.About receives prop wait from state
 class Circle extends Component {

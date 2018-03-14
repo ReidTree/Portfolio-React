@@ -1,0 +1,9 @@
+/* Break Bar Lines */
+.break-bar-outer { display: inline-flex; background-color: white; height: 10px; margin: 0 auto;}
+
+.break-bar-inner { width: 100%; }
+
+.contentBreak { margin: 0 auto;}
+.starBreak {width: 40px; display: inline-flex;}
+/* .starBreak:nth-child(2n+0) {float: right; } */
+/* Break Bar Lines End */

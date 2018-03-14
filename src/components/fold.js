@@ -3,6 +3,7 @@ import logo from '../imgs/TrierweilerCreates-white.png';
 import logoNrm from '../imgs/TrierweilerCreates-nrm-OngBlk.png';
 import Rt from './route';
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+import './fold.css';
 
 class MenuItem extends Component {
   render() {

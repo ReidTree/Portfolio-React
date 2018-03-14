@@ -3,8 +3,8 @@ import Rt from '../route';
 
 var mouseEvent = "mouseleave";
 
-//////////////// ABOUT ////////////////
-class HomeAbout extends Component {
+//////////////// ABOUT PAGE ////////////////
+class AboutPage extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -46,7 +46,7 @@ class HomeAbout extends Component {
 }
 ///////////////////////////////////////
 
-export default HomeAbout;
+export default AboutPage;
 
 
   // <p>I am an avid student consistently seeking growth in knowledge and skill.  Most recently, my studious passions lead me to Grand Circus Coding Bootcamp in Detroit, MI. I aim to leverage my skills, drive, knowledge of web development, design and marketing to find a company upon which I will add daily value and build a career as a web developer.</p>

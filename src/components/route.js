@@ -7,7 +7,9 @@ import HomeAbout from './home-sections/about';
 import HomeDesign from './home-sections/design';
 import HomeSites from './home-sections/sites';
 import HomeContact from './home-sections/contact';
-import HomeLayout from './home-sections/section-layout';
+import HomeLayout from './home-sections/home-layout';
+import MoreButton from './home-sections/more-buttons';
+import SitesHandle from './home-sections/sites-handle';
 
 import AboutPage from './pages/about-page';
 import SiteExamples from './pages/site-examples';
@@ -18,7 +20,6 @@ import StarBar from './reusable-comps/starbar';
 
 
 import Res from './responsive';
-import Layout from './aEvt';
 
 import webImages from './images';
 
@@ -33,13 +34,14 @@ const Rt = {
   HomeSites: HomeSites,
   HomeContact: HomeContact,
   HomeLayout: HomeLayout,
+  MoreButton: MoreButton,
+  SitesHandle: SitesHandle,
   AboutPage: AboutPage,
   SiteExamples: SiteExamples,
   DesignExamples: DesignExamples,
   Circle: Circle,
   StarBar: StarBar,
   Res: Res,
-  Layout: Layout,
   webImages: webImages,
   gists: gists,
   FindPage: FindPage,

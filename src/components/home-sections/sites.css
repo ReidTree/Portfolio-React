@@ -1,0 +1,70 @@
+.seeMore{cursor: pointer; text-decoration: underline; color: blue; font-size: 75%;}
+
+.containBars { margin: 30px; width: 300px; display: inline-block; height: 253px; overflow: hidden;}
+
+.containBars:hover {
+  background: radial-gradient(circle, rgba(204,85,0,1), rgba(204,85,0,.1), white);
+  transition: 1s;
+  cursor: pointer;
+}
+
+
+div.brandActive {
+  background-color: rgba(204,85,0,.5);
+}
+.containBars:hover .topBar, .containBars:hover .bottomBar, .containBars:hover .topBar::before, .containBars:hover .topBar::after, .containBars:hover .bottomBar::before, .containBars:hover .bottomBar::after {background: rgb(137,216,245); transition: 1s;}
+
+div.brandActive .topBar, div.brandActive .bottomBar, div.brandActive .topBar::before, div.brandActive .topBar::after, div.brandActive .bottomBar::before, div.brandActive .bottomBar::after  { background: white; filter: contrast(30%);}
+
+
+.topBar, .bottomBar {
+  background: black;
+  height: 10px;
+  position: relative;
+  width: 300px;
+  margin: 0px auto;
+}
+.topBar::after, .topBar::before, .bottomBar::after, .bottomBar::before {
+  background: black;
+  content: "";
+  height: 35px;
+  position: absolute;
+  width: 4%;
+}
+.topBar::after {
+  left: 0px;
+  top: 0px;
+}
+.topBar::before {
+  right: 0px;
+  top: 0px;
+}
+.bottomBar::after {
+  left: 0px;
+  bottom: 0px;
+}
+.bottomBar::before {
+  right: 0px;
+  bottom: 0px;
+}
+
+.containBarContent {
+  width: 100%;
+  margin: 20px auto;
+  z-index: 10;
+  height: 193px;
+  position: relative;
+}
+
+div.containBarContent img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.containBarImage {
+  z-index: 1000;
+  max-width: 300px;
+  max-height: 190px;
+}

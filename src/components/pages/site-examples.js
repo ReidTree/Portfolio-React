@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Rt from '../route';
 
-var mouseEvent = "mouseleave";
+// var mouseEvent = "mouseleave";
 
 //////////////// SITE EXAMPLES ////////////////
 class SiteExamples extends Component {

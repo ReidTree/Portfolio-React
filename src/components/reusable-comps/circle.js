@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Rt from '../route';
 import './circle.css';
+import banner from './imgs/banner.gif';
 
 // circles in HomePage.About receives prop wait from state
 class Circle extends Component {
@@ -9,9 +10,12 @@ class Circle extends Component {
       <div className="circleCont">
         <div className="circleWrap">
           <div className="circleIcons">
-             <img src={x} className={y} />
+             <img src={x} className={y} alt=""/>
           </div>
-            <h4>{z}</h4>
+          <div className="titleBanner">
+          <img className="circle-banner" src={banner} alt="" />
+            <h4 className="circleHead snas w-300">{z}</h4>
+          </div>
         </div>
       </div>
     );

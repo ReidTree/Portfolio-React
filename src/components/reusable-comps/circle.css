@@ -1,60 +1,100 @@
 /* about circles */
-img.circleAnimate {opacity: 1;
-  transform: translateY(5%);
-  -ms-transform: translateY(5%);
-  -webkit-transform: translateY(5%);
-  transition: 1.5s;
+img.circleAnimate {opacity: 1; transition: .5s; }
+
+img.circleAnimate:hover {opacity: 1; transition: .3s;
 }
 
-img.circleAnimate:hover {opacity: 1;
-  transform: rotateY(30deg);
-  -ms-transform: rotateY(30deg);
-  -webkit-transform: rotateY(30deg);
-  transition: .5s;
-}
-
-.circleInit { opacity: 0; width: 100%;
-  transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  -webkit-transform: translateY(50%);
-}
-.circleIcons::after { overflow: none;}
+.circleInit { opacity: 0; width: 100%; }
+.circleIcons::after { }
 
 .circleCont {width: 100%; margin: 0 auto; display: inline-flex;}
 .circleWrap { display: inline-block; margin: 0 auto;}
-.circleIcons { border: 5px solid black; border-radius: 50%; width: 80%; margin: 0 auto; overflow: hidden;}
-div.circleIcons:hover { border: 10px solid #6DCFF6; transition: .5s;}
+.circleIcons { border: 5px solid black; border-radius: 50%; width: 80%; margin: 0 auto;}
+div.circleIcons:hover { filter: hue-rotate(360deg); transition: 5s;}
+.circle-banner { width: inherit;
 
-.home-section-head {width: 100%; margin: 50px auto 0 auto; font-size: 2em; text-align: center;}
+}
+
+.circleHead { z-index: 100; font-size: 1.1em;
+  transform: translateY(-325%);
+  -ms-transform: translateY(-325%);
+  -webkit-transform: translateY(-325%);
+}
+
+div.titleBanner {height: 50px; width: 100%;
+  transform: translateY(-125%);
+  -ms-transform: translateY(-125%);
+  -webkit-transform: translateY(-125%);
+}
+/* .circleHead {background-image: image("./imgs/banner.gif") inherit;} */
 /* about circles End */
 
 
 
  /* smartphones, iPhone, portrait 480x320 phones */
 @media (min-width:320px) {
-  .circleWrap { width: 50%;}
+  .circleWrap { width: 80%;}
+  .circleHead { font-size: 1.1em;}
+
+}
+
+@media (min-width:375px) {
+  .circleWrap { width: 80%;}
+  .circleHead { font-size: 1.17em;}
+
+}
+
+@media (min-width:425px) {
+  .circleHead { font-size: 1.3em;}
+
 }
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width:481px) {
-  .circleWrap { width: 40%;}
+  .circleHead { font-size: 1.5em;}
 }
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media (min-width:641px) {
-  .circleCont {width: 30%;}
   .circleWrap { width: 100%;}
-  .circleIcons { border: 10px solid black; }
+  .circleIcons { border: 5px solid black; }
+  .circleCont {width: 29%; margin: 0 10px;}
+  .circleHead { font-size: .77em;
+    transform: translateY(-325%);
+    -ms-transform: translateY(-325%);
+    -webkit-transform: translateY(-325%);
+  }
 
+  div.titleBanner {
+    transform: translateY(-75%);
+    -ms-transform: translateY(-75%);
+    -webkit-transform: translateY(-75%);
+  }
+}
+@media (min-width:700px) {
+  .circleIcons { border: 6px solid black; }
+  .circleCont {width: 30%; margin: 0 10px;}
+  .circleHead { font-size: .9em;}
+}
+@media (min-width:768px) {
+  .circleIcons { border: 7px solid black; }
+  div.titleBanner {
+    transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+  }
 }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:961px) {
+  .circleHead { font-size: 1.1em;}
 
 
 }
 /* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {
+  .circleHead { font-size: 1.15rem;}
 
 }
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
+  .circleHead { font-size: 1.3rem;}
 
 }

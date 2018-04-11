@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Rt from '../route';
 
-var mouseEvent = "mouseleave";
+// var mouseEvent = "mouseleave";
 
 //////////////// ABOUT PAGE ////////////////
 class AboutPage extends Component {
@@ -13,7 +13,6 @@ class AboutPage extends Component {
   }
 
   componentDidMount() {
-    var self = this;
     this.timer = setTimeout(() => this.tick(), 500);
   }
 
@@ -26,20 +25,15 @@ class AboutPage extends Component {
   }
 
   render() {
-    const moreStructure = {
-      title: "about",
-      type: "moreDirect",
-    }
     return(
       <Rt.HomeLayout >
         <div className="beautiful" >
           <h3>Developing Beautiful Web</h3>
         </div>
         <div className="about-summary" >
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Dedicated to merging best practices in Web Development, Marketing and Graphic Design. Trierweiler Creates helps position your web pages to meet your customers user needs to ensure usability. With years of Graphic Design experience, a degree in Marketing and over a year as a Web Developer, Trierweiler Creates offers all these expertise to support your company’s web needs.</p>
         </div>
         <Rt.Circle wait={this.state.wait}  />
-        <Rt.Layout objPass={moreStructure} />
       </Rt.HomeLayout >
     );
   }

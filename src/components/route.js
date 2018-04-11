@@ -9,11 +9,11 @@ import HomeSites from './home-sections/sites';
 import HomeContact from './home-sections/contact';
 import HomeLayout from './home-sections/home-layout';
 import MoreButton from './home-sections/more-buttons';
-import SitesHandle from './home-sections/sites-handle';
 
 import AboutPage from './pages/about-page';
 import SiteExamples from './pages/site-examples';
 import DesignExamples from './pages/design-examples';
+import Demos from './pages/demos-factory';
 
 import Circle from './reusable-comps/circle';
 import StarBar from './reusable-comps/starbar';
@@ -24,7 +24,6 @@ import Res from './responsive';
 import webImages from './images';
 
 import gists from './gists';
-import FindPage from './findPage';
 
 const Rt = {
   Fold: Fold,
@@ -35,16 +34,15 @@ const Rt = {
   HomeContact: HomeContact,
   HomeLayout: HomeLayout,
   MoreButton: MoreButton,
-  SitesHandle: SitesHandle,
   AboutPage: AboutPage,
   SiteExamples: SiteExamples,
   DesignExamples: DesignExamples,
+  Demos: Demos,
   Circle: Circle,
   StarBar: StarBar,
   Res: Res,
   webImages: webImages,
   gists: gists,
-  FindPage: FindPage,
 }
 
 export default Rt;

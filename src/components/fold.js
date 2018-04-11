@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from '../imgs/TrierweilerCreates-white.png';
 import logoNrm from '../imgs/TrierweilerCreates-nrm-OngBlk.png';
 import Rt from './route';
-import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+import {BrowserRouter as Router, Link} from "react-router-dom";
 import './fold.css';
+import linkedIn from '../imgs/linkedIn-logo.png';
 
 class MenuItem extends Component {
   render() {
@@ -13,7 +14,7 @@ class MenuItem extends Component {
 
         {gists ? (gists.map(gist => (
           <div key={gist.id}>
-            <Link style={{"textDecoration": "none"}} to={'/' + gist.id}>
+            <Link style={{"textDecoration": "none"}} to={gist.url}>
               <div className="popMenu" >
                 {gist.description || '[no description]'}
               </div>
@@ -48,7 +49,9 @@ class Hamburger extends Component {
     return (
       <div id="hamburger" style={this.props.hamTop} className={"hamburger " + this.props.hovChange} onClick={() => this.handleClick()}>
         <div className={popStyle}>
+        <div className="close">X</div>
           {items}
+          <a href="https://www.linkedin.com/in/reid-trier"> <img className="linkedInPop" src={linkedIn} alt="LinkedIn"/></a>
         </div>
       </div>
     );
@@ -84,17 +87,30 @@ class FoldMount extends Component {
 
   render() {
     var ps = this.props;
+    var foldHeight = ps.foldMin;
+    var foldInit = ps.foldMin;
+    var styleLogo = "preLogo";
+    var theLogo = this.state.img;
+    if (window.location.pathname === "/") {
+      foldHeight = ps.foldH;
+      foldInit = ps.foldInitH;
+    }
+    if (foldHeight.height === ps.foldMin.height) {
+      styleLogo = "postLogo";
+      theLogo = logoNrm
+    }
     return (
       <div className="foldContain">
-        <header className={"App-header " + this.state.back} style={ps.foldH}>
+        <header className={"App-header " + this.state.back + " " + styleLogo} style={foldHeight}>
+        <div className="leather"> </div>
           <Hamburger hovChange={this.state.back} hamTop={ps.hamTop} />
-          <div className="logo-container" style={ps.foldH}>
-            <Link to="/home">
-              <img onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseEnter} src={this.state.img} className={"App-logo " + this.state.back} alt="logo" style={ps.foldH} />
+          <div className="logo-container" style={foldHeight}>
+            <Link to="/">
+              <img onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseEnter} src={theLogo} className={"App-logo " + this.state.back} alt="logo" style={foldHeight} />
             </Link>
           </div>
         </header>
-        <div style={ps.foldInitH}> </div>
+        <div style={foldInit}> </div>
       </div>
     )
   }
@@ -109,7 +125,8 @@ class Fold extends Component {
       <FoldMount
         foldInitH={{"height": foldStateInit + "px"}}
         foldH={{"height": foldState + "px"}}
-        hamTop={{"top": ((foldMin/2)-(26/2)) + "px"}} />
+        hamTop={{"top": ((foldMin/2)-(26/2)) + "px"}}
+        foldMin={{"height": foldMin + "px"}}/>
     );
   }
 }

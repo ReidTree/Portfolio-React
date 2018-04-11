@@ -1,0 +1,150 @@
+.seeMore{cursor: pointer; text-decoration: underline; color: blue; font-size: 75%;}
+
+.containBars { margin: 30px; width: 300px; display: inline-block; height: 253px; overflow: hidden;}
+
+.containBars:hover {
+  background: radial-gradient(circle, rgba(204,85,0,1), rgba(204,85,0,.1), white);
+  transition: 1s;
+  cursor: pointer;
+}
+
+
+div.brandActive {
+  background-color: rgba(204,85,0,.5); width: 100%; transition: .5s; margin: 20px auto; height: auto;
+}
+
+div.demoTextContain {
+  height: 0;
+}
+
+div.brandActive div.demoTextContain {
+  height: auto; transition: .5s;
+}
+
+p.demoText {
+  padding: 20px;
+}
+
+.containBars:hover .topBar, .containBars:hover .bottomBar, .containBars:hover .topBar::before, .containBars:hover .topBar::after, .containBars:hover .bottomBar::before, .containBars:hover .bottomBar::after {background: rgb(137,216,245); transition: 1s;}
+
+div.brandActive .topBar, div.brandActive .bottomBar, div.brandActive .topBar::before, div.brandActive .topBar::after, div.brandActive .bottomBar::before, div.brandActive .bottomBar::after  { background: white; filter: contrast(30%);}
+
+div.brandActive .topBar, div.brandActive .bottomBar {
+  width: 100%;
+}
+
+div.brandActive .topBar::after, div.brandActive .topBar::before, div.brandActive .bottomBar::after, div.brandActive .bottomBar::before {
+  width: 1%;
+}
+
+
+.topBar, .bottomBar {
+  background: black;
+  height: 10px;
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+}
+.topBar::after, .topBar::before, .bottomBar::after, .bottomBar::before {
+  background: black;
+  content: "";
+  height: 35px;
+  position: absolute;
+  width: 4%;
+}
+.topBar::after {
+  left: 0px;
+  top: 0px;
+}
+.topBar::before {
+  right: 0px;
+  top: 0px;
+}
+.bottomBar::after {
+  left: 0px;
+  bottom: 0px;
+}
+.bottomBar::before {
+  right: 0px;
+  bottom: 0px;
+}
+
+.containBarContent {
+  width: 100%;
+  margin: 20px auto;
+  z-index: 10;
+  height: 193px;
+  position: relative;
+}
+
+div.containBarContent img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.containBarImage {
+  z-index: 1000;
+  max-width: 300px;
+  max-height: 190px;
+}
+
+
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {
+  div.brandActive .topBar::after, div.brandActive .topBar::before, div.brandActive .bottomBar::after, div.brandActive .bottomBar::before {
+    width: 2.5%;
+  }
+
+}
+
+@media (min-width:375px) {
+  div.brandActive .topBar::after, div.brandActive .topBar::before, div.brandActive .bottomBar::after, div.brandActive .bottomBar::before {
+    width: 2.3%;
+  }
+}
+
+@media (min-width:425px) {
+  div.brandActive .topBar::after, div.brandActive .topBar::before, div.brandActive .bottomBar::after, div.brandActive .bottomBar::before {
+    width: 2%;
+  }
+}
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media (min-width:481px) {
+
+}
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {
+
+}
+
+@media (min-width:700px) {
+
+}
+
+@media (min-width:768px) {
+  div.brandActive .topBar::after, div.brandActive .topBar::before, div.brandActive .bottomBar::after, div.brandActive .bottomBar::before {
+    width: 1%;
+  }
+
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:961px) {
+
+
+}
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+
+}
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+
+}

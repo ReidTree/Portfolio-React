@@ -1,9 +1,13 @@
 .contentContainer { width: 100%; margin: 0 auto; text-align: center;}
 
+.sitesPage { padding-bottom: 50px;}
+
+
 .contentWrap { width: 95%; margin: 0 auto; }
  /* smartphones, iPhone, portrait 480x320 phones */
 @media (min-width:320px) {
   .contentWrap { width: 95%;}
+  .home-section-head {font-size: 1.7rem;}
 }
 /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 @media (min-width:481px) {
@@ -11,21 +15,21 @@
 }
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media (min-width:641px) {
-  .contentWrap { width: 85%;}
+  .contentWrap { width: 80%;}
 
 }
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 @media (min-width:961px) {
-  .contentWrap { width: 80%; }
+  .contentWrap { width: 75%; }
 
 
 }
 /* big landscape tablets, laptops, and desktops */
 @media (min-width:1025px) {
-  .contentWrap { width: 75%; }
+  .contentWrap { width: 70%; }
 
 }
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
-  .contentWrap { width: 70%; }
+  .contentWrap { width: 60%; }
 }

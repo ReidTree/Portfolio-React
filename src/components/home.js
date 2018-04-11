@@ -6,7 +6,7 @@ class Home extends Component {
     const sizeExport = Rt.Res.sizeExport;
     const sH = sizeExport.sH;
     const sW = sizeExport.sW;
-    const sY = sizeExport.sY;
+    // const sY = sizeExport.sY;
     return (
         <div>
           <Rt.HomeAbout />

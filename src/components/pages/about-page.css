@@ -1,0 +1,13 @@
+p.web-paragraph {
+  display: inline;
+  clear: right;
+  vertical-align: top;
+  top: 0;
+  text-align: left;
+  font-size: 1em;
+}
+.about-sections div span { display: block; margin: 10px auto; text-align: left; line-height: 1.5em;}
+
+.about-sections { clear: both; padding: 10px 0;}
+
+div.extra-margin { margin-bottom: 100px;}

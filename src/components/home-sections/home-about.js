@@ -28,11 +28,11 @@ class HomeAbout extends Component {
 
   render() {
     return(
-      <Rt.HomeLayout title="Developing Beautiful Web">
+      <Rt.HomeLayout title="Delightful Web Development">
+        <p>Trierweiler Creates is dedicated to merging best practices in Web Development, Marketing and Graphic Design. Positioning your web pages to grab your customers&rsquo; attention and ensure usability. With years of Graphic Design experience, a degree in Marketing and over a year experience of Web Development, Trierweiler Creates offers all these expertise to support your company&rsquo;s web needs.</p>
         <div className="about-summary serif  w-100" >
-          <p>Dedicated to merging best practices in Web Development, Marketing and Graphic Design. Trierweiler Creates helps position your web pages to meet your customers user needs to ensure usability. With years of Graphic Design experience, a degree in Marketing and over a year as a Web Developer, Trierweiler Creates offers all these expertise to support your company’s web needs.</p>
         </div>
-        <Rt.Circle wait={this.state.wait}  />
+        <Rt.Circle wait={this.state.wait} />
         <Rt.MoreButton title="about" />
       </Rt.HomeLayout >
     );

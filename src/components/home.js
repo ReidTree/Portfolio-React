@@ -12,8 +12,6 @@ class Home extends Component {
           <Rt.HomeAbout />
           <Rt.StarBar sizeExport={sizeExport}/>
           <Rt.HomeSites sW={sW} sH={sH}/>
-          <Rt.StarBar sizeExport={sizeExport}/>
-          <Rt.HomeDesign />
           <Rt.HomeContact />
         </div>
     );

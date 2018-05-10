@@ -3,7 +3,6 @@ import './App.css';
 import Rt from './components/route';
 import {BrowserRouter as Router, Route,  Link, Switch, Redirect} from "react-router-dom";
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -73,7 +72,7 @@ class App extends Component {
               <div key={gist.id} className="footerRouteOut">
                 <Link style={{"textDecoration": "none"}} to={gist.url}>
                   <div className="footerRouteIn helv w-700" >
-                    {gist.title.toUpperCase() || '[no description]'}
+                    {gist.title.toUpperCase() || '[no description]'}                   
                   </div>
                 </Link>
               </div>

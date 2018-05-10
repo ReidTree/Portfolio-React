@@ -3,19 +3,18 @@
 .containBars { margin: 30px; width: 300px; display: inline-block; height: 253px; overflow: hidden;}
 
 .containBars:hover {
-  background: radial-gradient(circle, rgba(204,85,0,1), rgba(204,85,0,.1), white);
   transition: 1s;
   cursor: pointer;
 }
 
+.sites-home { padding: 0 20px; }
 
 div.brandActive {
-  background-color: rgba(204,85,0,.5);
+  background-color: rgba(204,85,0,.2);
 }
 .containBars:hover .topBar, .containBars:hover .bottomBar, .containBars:hover .topBar::before, .containBars:hover .topBar::after, .containBars:hover .bottomBar::before, .containBars:hover .bottomBar::after {background: rgb(137,216,245); transition: 1s;}
 
 div.brandActive .topBar, div.brandActive .bottomBar, div.brandActive .topBar::before, div.brandActive .topBar::after, div.brandActive .bottomBar::before, div.brandActive .bottomBar::after  { background: white; filter: contrast(30%);}
-
 
 .topBar, .bottomBar {
   background: black;

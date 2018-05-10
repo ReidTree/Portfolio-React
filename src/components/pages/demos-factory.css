@@ -3,14 +3,13 @@
 .containBars { margin: 30px; width: 300px; display: inline-block; height: 253px; overflow: hidden;}
 
 .containBars:hover {
-  background: radial-gradient(circle, rgba(204,85,0,1), rgba(204,85,0,.1), white);
   transition: 1s;
   cursor: pointer;
 }
 
 
 div.brandActive {
-  background-color: rgba(204,85,0,.5); width: 100%; transition: .5s; margin: 20px auto; height: auto;
+  background-color: rgba(204,85,0,.2); width: 100%; transition: .5s; margin: 20px auto; height: auto;
 }
 
 div.demoTextContain {
@@ -22,7 +21,7 @@ div.brandActive div.demoTextContain {
 }
 
 p.demoText {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .containBars:hover .topBar, .containBars:hover .bottomBar, .containBars:hover .topBar::before, .containBars:hover .topBar::after, .containBars:hover .bottomBar::before, .containBars:hover .bottomBar::after {background: rgb(137,216,245); transition: 1s;}
@@ -37,6 +36,8 @@ div.brandActive .topBar::after, div.brandActive .topBar::before, div.brandActive
   width: 1%;
 }
 
+.linked-sites a { font-weight: bold; font-size: 1.5em; text-decoration: none; }
+.linked-sites { padding-bottom: 20px; }
 
 .topBar, .bottomBar {
   background: black;

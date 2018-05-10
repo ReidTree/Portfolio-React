@@ -8,27 +8,30 @@ img.circleAnimate:hover {opacity: 1; transition: .3s;
 .circleIcons::after { }
 
 .circleCont {width: 100%; margin: 0 auto; display: inline-flex;}
+.about-page {width: 30%; margin: 0; display: inline-flex; float: left;}
+.about-page .titleBanner { display: none;}
 .circleWrap { display: inline-block; margin: 0 auto;}
 .circleIcons { border: 5px solid black; border-radius: 50%; width: 80%; margin: 0 auto;}
+div.about-sections div.circleIcons {margin-bottom: 10px}
 div.circleIcons:hover { filter: hue-rotate(360deg); transition: 5s;}
-.circle-banner { width: inherit;
-
+.circle-banner { width: inherit; }
+.circle-banner {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.circleHead { z-index: 100; width: 100%; font-size: 1.0em; padding: 0; margin: 0;
+  position: absolute; left: 50%; top: 47%; transform: translate(-50%, -50%);
 }
 
-.circleHead { z-index: 100; font-size: 1.1em;
-  transform: translateY(-325%);
-  -ms-transform: translateY(-325%);
-  -webkit-transform: translateY(-325%);
-}
-
-div.titleBanner {height: 50px; width: 100%;
+div.titleBanner { position: relative; height: 50px; width: 100%;
   transform: translateY(-125%);
   -ms-transform: translateY(-125%);
   -webkit-transform: translateY(-125%);
 }
-/* .circleHead {background-image: image("./imgs/banner.gif") inherit;} */
 /* about circles End */
 
+#web-about-head, #mkt-about-head, #design-about-head {
+  text-align: left; font-size: 24px;
+}
 
 
  /* smartphones, iPhone, portrait 480x320 phones */
@@ -57,10 +60,8 @@ div.titleBanner {height: 50px; width: 100%;
   .circleWrap { width: 100%;}
   .circleIcons { border: 5px solid black; }
   .circleCont {width: 29%; margin: 0 10px;}
+  .about-page {width: 29%;}
   .circleHead { font-size: .77em;
-    transform: translateY(-325%);
-    -ms-transform: translateY(-325%);
-    -webkit-transform: translateY(-325%);
   }
 
   div.titleBanner {
@@ -72,6 +73,7 @@ div.titleBanner {height: 50px; width: 100%;
 @media (min-width:700px) {
   .circleIcons { border: 6px solid black; }
   .circleCont {width: 30%; margin: 0 10px;}
+  .about-page {width: 30%;}
   .circleHead { font-size: .9em;}
 }
 @media (min-width:768px) {
@@ -95,6 +97,6 @@ div.titleBanner {height: 50px; width: 100%;
 }
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
-  .circleHead { font-size: 1.3rem;}
+  .circleHead { font-size: 1.2rem;}
 
 }

@@ -3,7 +3,7 @@ import Fold from './fold';
 
 // returns object of HomePage components
 import Home from './home';
-import HomeAbout from './home-sections/about';
+import HomeAbout from './home-sections/home-about';
 import HomeDesign from './home-sections/design';
 import HomeSites from './home-sections/sites';
 import HomeContact from './home-sections/contact';

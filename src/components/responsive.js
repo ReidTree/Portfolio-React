@@ -35,14 +35,11 @@ function ResCalc(x,y,sY){
 
   var cScreen;
   if (x > 900 ){
-    cScreen = "desktop";
-    sizeExport.foldMin = 160;
+    sizeExport.foldMin = 75;
   } else if (x <= 912 && x > 480) {
-    cScreen = "tablet";
-    sizeExport.foldMin = 100;
+    sizeExport.foldMin = 60;
   } else if (x <= 480) {
-    cScreen = "mobile";
-    sizeExport.foldMin = 50;
+    sizeExport.foldMin = 45;
     sizeExport.foldStateInit = 176;
   }
   Res.currentScreen = cScreen;

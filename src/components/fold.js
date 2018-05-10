@@ -5,6 +5,7 @@ import Rt from './route';
 import {BrowserRouter as Router, Link} from "react-router-dom";
 import './fold.css';
 import linkedIn from '../imgs/linkedIn-logo.png';
+import gitOctopus from '../imgs/git.png';
 
 class MenuItem extends Component {
   render() {
@@ -46,12 +47,16 @@ class Hamburger extends Component {
   render() {
     const items = this.state.menuActive ? <MenuItem /> : <div></div>;
     const popStyle = this.state.menuActive ? "popStyle" : null;
+    const ham = this.props.hamStyle;
     return (
-      <div id="hamburger" style={this.props.hamTop} className={"hamburger " + this.props.hovChange} onClick={() => this.handleClick()}>
+      <div id={ham} style={this.props.hamTop} className={ham + " " + this.props.hovChange} onClick={() => this.handleClick()}>
         <div className={popStyle}>
         <div className="close">X</div>
           {items}
-          <a href="https://www.linkedin.com/in/reid-trier"> <img className="linkedInPop" src={linkedIn} alt="LinkedIn"/></a>
+          <div className="social-logos">
+            <a href="https://www.linkedin.com/in/reid-trier"> <img className="linkedInPop" src={linkedIn} alt="LinkedIn"/></a>
+            <a href="https://github.com/ReidTree"> <img className="linkedInPop" src={gitOctopus} alt="github"/></a>
+          </div>
         </div>
       </div>
     );
@@ -91,19 +96,21 @@ class FoldMount extends Component {
     var foldInit = ps.foldMin;
     var styleLogo = "preLogo";
     var theLogo = this.state.img;
+    var hamburger = "hamburger-white";
     if (window.location.pathname === "/") {
       foldHeight = ps.foldH;
       foldInit = ps.foldInitH;
     }
     if (foldHeight.height === ps.foldMin.height) {
       styleLogo = "postLogo";
-      theLogo = logoNrm
+      theLogo = logoNrm;
+      hamburger = "hamburger";
     }
     return (
       <div className="foldContain">
         <header className={"App-header " + this.state.back + " " + styleLogo} style={foldHeight}>
         <div className="leather"> </div>
-          <Hamburger hovChange={this.state.back} hamTop={ps.hamTop} />
+          <Hamburger hamStyle={hamburger} hovChange={this.state.back} hamTop={ps.hamTop} />
           <div className="logo-container" style={foldHeight}>
             <Link to="/">
               <img onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseEnter} src={theLogo} className={"App-logo " + this.state.back} alt="logo" style={foldHeight} />

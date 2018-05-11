@@ -15,7 +15,7 @@ class HomeContact extends Component {
         <div className="contact-text serif w-200" >
         <div className="white-blur"> </div>
           <p>If you are interested in working with Trierweiler Creates, or you want to express your emtion about my work. </p>
-          <p> Just email <a href="mailto:rt.trierweiler@gmail.com">CLICK HERE</a>. Any emotional response tolorated and celebrated. </p>
+          <p> Just email <a className="mail-forward" href="mailto:rt.trierweiler@gmail.com">rt.trierweiler@gmail.com</a>. </p>
         </div>
       </div>
     );

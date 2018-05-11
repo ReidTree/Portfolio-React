@@ -61,7 +61,9 @@ class App extends Component {
             <Switch>
               <Route exact={true} path="/" component={Rt.Home} />
               <Route path="/about" component={Rt.AboutPage} />
-              <Route path="/sites" component={Rt.Demos} />
+              <Route exact={true} path="/sites" component={Rt.Demos} />
+              <Route path="/sites/:demosId" component={Demos} />
+              <Route path="/404" component={Rt.Demos} />
             </Switch>
           </div>
 
@@ -72,7 +74,7 @@ class App extends Component {
               <div key={gist.id} className="footerRouteOut">
                 <Link style={{"textDecoration": "none"}} to={gist.url}>
                   <div className="footerRouteIn helv w-700" >
-                    {gist.title.toUpperCase() || '[no description]'}                   
+                    {gist.title.toUpperCase() || '[no description]'}
                   </div>
                 </Link>
               </div>
@@ -94,6 +96,14 @@ class App extends Component {
   }
 }
 
+const Demos = ({ match }) => {
+  // Object.keys(Rt.demos).forEach(function(e){
+  //   console.log(e)
+  // });
+  return (
+    <h1>{match.params.demosId}</h1>
+  )
+}
 
 // <Rt.FindPage page={match.params.gistId} />
   // gistLocate(match)

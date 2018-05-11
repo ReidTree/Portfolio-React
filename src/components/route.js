@@ -18,6 +18,7 @@ import Demos from './pages/demos-factory';
 import Circle from './reusable-comps/circle';
 import StarBar from './reusable-comps/starbar';
 
+// import MadLib from './demos/madlib/build';
 
 import Res from './responsive';
 
@@ -43,6 +44,9 @@ const Rt = {
   Res: Res,
   webImages: webImages,
   gists: gists,
+  // demos: {
+  //   MadLib: MadLib
+  // },
 }
 
 export default Rt;

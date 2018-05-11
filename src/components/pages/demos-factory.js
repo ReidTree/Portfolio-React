@@ -6,7 +6,7 @@ import miCapital from '../../imgs/miCapital.png';
 import trueWrap from '../../imgs/trueWrap.png';
 import tCreates from '../../imgs/TrierweilerCreates-nrm-OngBlk.png';
 import snapFilters from './snapchat';
-
+import gitOctopus from '../../imgs/git.png';
 
 import "./demos-factory.css";
 
@@ -136,6 +136,17 @@ class Demos extends Component {
         {demoData.map(demo => (
           <DemoBuild key={demo.id} click={() => (this.handleClick(demo))} demoData={demo} aState={this.state} />
         ))}
+
+        <div className="github-projects">
+          <p className="serif w-100 github-text">The above projects are just a preview of my work. See more at my GitHub page.</p>
+          <div className="gitBtn-wrap">
+            <a className="gitLink" href="https://github.com/ReidTree">
+            <button className="gitBtn"  name="gitButton" type="button"><img className="gitImage" src={gitOctopus} />
+                <span className="gitBtn-text">GitHub</span>
+            </button>
+            </a>
+          </div>
+        </div>
 
       </Rt.HomeLayout>
     );

@@ -4,14 +4,14 @@
 .contact-wrap div { margin: 0 auto; width: 80%; padding: 4px; background-color: rgba(204,85,0,1); box-shadow: 3px 3px 20px 2px rgba(0,0,0,.4);}
 
 .contact-wrap div h3 { margin: 0 auto; font-size: 1.5em; text-align: center; padding: 10px; border: 4px solid white; color: white; background-color: rgba(204,85,0,1) }
-.contact-text {padding: 10px; width: 70%; margin: 0 auto; background-color: white;
+.contact-text {padding: 10px; width: 70%; margin: 0 auto; background-color: white; z-index: 1000;
 }
-.contact-text > p {color: black; margin: 10px; text-align: center; font-size: 1.2em; opacity: 1;
+.contact-text > p {color: black; margin: 10px; text-align: center; font-size: 1.2em; opacity: 1; z-index: 1000;
 }
 .contact-text p a {text-decoration: none;}
 
 
-
+.mail-forward { z-index: 1000; cursor: pointer; position: relative;}
 
  /* smartphones, iPhone, portrait 480x320 phones */
 @media (min-width:320px) {

@@ -54,76 +54,51 @@ class App extends Component {
     const gists = Rt.gists;
     Rt.Res.ResCalc(sW,sH,sY)
     return (
-      <Router>
-        <div className={this.state.fadeIn + ' transition-03'}>
-          <Rt.Res.FoldSizing sW={sW} sH={sH} sY={sY}/>
-          <div>
-            <Switch>
-              <Route exact={true} path="/" component={Rt.Home} />
-              <Route path="/about" component={Rt.AboutPage} />
-              <Route exact={true} path="/sites" component={Rt.Demos} />
-              <Route path="/sites/:demosId" component={Demos} />
-              <Route path="/404" component={Rt.Demos} />
-            </Switch>
-          </div>
-
-          <div className="footer">
-            <div className="footerRouting">
-
-            {gists.map(gist => (
-              <div key={gist.id} className="footerRouteOut">
-                <Link style={{"textDecoration": "none"}} to={gist.url}>
-                  <div className="footerRouteIn helv w-700" >
-                    {gist.title.toUpperCase() || '[no description]'}
-                  </div>
-                </Link>
-              </div>
-              ))}
-              <div className="leather"> </div>
-
-            </div>
-            <div className="copy-right helv w-100">
-              <div className="leather"> </div>
-              <div className="copyRightText">
-                © REID TRIERWEILER 2018
-              </div>
-            </div>
-          </div>
-
+      <div className={this.state.fadeIn + ' transition-03'}>
+        <Rt.Res.FoldSizing sW={sW} sH={sH} sY={sY}/>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Rt.Home} />
+            <Route path="/about" component={Rt.AboutPage} />
+            <Route path="/sites" component={Rt.Demos} />
+            <Route component={NoMatch} />
+          </Switch>
         </div>
-      </Router>
+
+        <div className="footer">
+          <div className="footerRouting">
+
+          {gists.map(gist => (
+            <div key={gist.id} className="footerRouteOut">
+              <Link style={{"textDecoration": "none"}} to={gist.url}>
+                <div className="footerRouteIn helv w-700" >
+                  {gist.title.toUpperCase() || '[no description]'}
+                </div>
+              </Link>
+            </div>
+            ))}
+            <div className="leather"> </div>
+
+          </div>
+          <div className="copy-right helv w-100">
+            <div className="leather"> </div>
+            <div className="copyRightText">
+              © REID TRIERWEILER 2018
+            </div>
+          </div>
+        </div>
+
+      </div>
     );
   }
 }
 
-const Demos = ({ match }) => {
-  // Object.keys(Rt.demos).forEach(function(e){
-  //   console.log(e)
-  // });
-  return (
-    <h1>{match.params.demosId}</h1>
-  )
-}
-
-// <Rt.FindPage page={match.params.gistId} />
-  // gistLocate(match)
+const NoMatch = () => (
+    <div className="oops">
+      <h2 className="oops-head">Oops!!</h2>
+        <p className="sans">Looks like something went wrong!</p>
+      <Link to="/"><p>SEND ME HOME</p></Link>
+    </div>
+  );
 
 export default App;
-
-// {gists ? (gists.map(gist => (
-//   <div key={gist.id}>
-//     <Link to={'/' + gist.id}>
-//       {gist.description || '[no description]'}
-//     </Link>
-//   </div>
-//   ))
-// ) : (
-//   <div> Loading... </div>
-// )}
-
-// <Rt.HomeAbout />
-// <Rt.StarBar sizeExport={sizeExport}/>
-// <Rt.HomeSites sW={sW} sH={sH}/>
-// <Rt.StarBar sizeExport={sizeExport}/>
-// <Rt.HomeDesign />
-// <Rt.HomeContact />
